@@ -17,13 +17,9 @@ class NotificationResource extends JsonResource
         return [
             'message' => trans($this->data['message'], $this->data['localed_data']),
             'dashboard_url' => route(
-                $this->data['dashboard_route'],
-                $this->data['dashboard_route_data'] + ['notification_id' => $this->id]
-            ),
+                $this->data['dashboard_route']). "?notify_id=$this->id",
             'url' => route(
-                $this->data['route'],
-                $this->data['route_data'] + ['notification_id' => $this->id]
-            ),
+                $this->data['route']),
             'date' => $this->created_at,
             'formated_date' => $this->created_at->diffForHumans(),
         ];

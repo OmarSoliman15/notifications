@@ -5,7 +5,7 @@ namespace App\Listeners;
 use App\Models\Admin;
 use App\Events\Action;
 use Illuminate\Support\Facades\Notification;
-use App\Notifications\clickActionNotification;
+use App\Notifications\ClickActionNotification;
 
 class ActionListener
 {
@@ -30,6 +30,6 @@ class ActionListener
         $admin = Admin::find(1);
 
         Notification::send($admin,
-            new clickActionNotification());
+            new ClickActionNotification());
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class clickActionNotification extends Notification
+class ClickActionNotification extends Notification
 {
     use Queueable;
 
@@ -49,14 +49,12 @@ class clickActionNotification extends Notification
     public function toDatabase($notifiable)
     {
         return [
-            'message' => 'notifications.messages.action', // trans('notifications.messages.registered', $localed_data = [])
+            'message' => 'Notification created', // trans('notifications.messages.registered', $localed_data = [])
             'localed_data' => [
-                'user' => auth()->user()->name,
+                'user' => $notifiable->id,
             ],
             'dashboard_route' => 'dashboard.home',
-            'dashboard_route_data' => '', // route('dashboard.users.show', [$this->target->id])
             'route' => 'dashboard.home', // The notification route name for web
-            'route_data' => '', // route('users.show', [$this->target->id])
         ];
     }
 }

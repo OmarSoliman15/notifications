@@ -17,7 +17,7 @@ class NotificationCollection extends ResourceCollection
         $notifications = $this->resource;
 
         return [
-            'count' => auth()->user()->notifications->count(),
+            'count' => auth()->user()->unreadNotifications->count(),
             //'have_message' => trans_choice('notifications.have', auth()->user()->notifications->count()),
             'link' => route('dashboard.notifications'),
             //'all_message' =>trans('notifications.all'),
