@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use Illuminate\Http\Request;
+use App\Events\Action;
 use App\Http\Controllers\Controller;
 
-class HomeController extends Controller
+class ActionController extends Controller
 {
     /**
-     * Display the dashboard home page.
+     * Click the action button.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function click()
     {
+        event(new Action());
+
         return view('dashboard.home');
     }
 }

@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->command->call('passport:install', ['--force' => '--force']);
+//        $this->command->call('passport:install', ['--force' => '--force']);
 
         $this->call(UsersTableSeeder::class);
     }

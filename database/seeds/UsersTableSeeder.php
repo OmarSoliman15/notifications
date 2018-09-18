@@ -12,8 +12,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         factory(\App\Models\Admin::class)->create($data = [
-            'name' => 'Elnooronline',
-            'email' => 'admin@elnooronline.com',
+            'name' => 'Omar Soliman',
+            'email' => 'omarsolimandev@gmail.com',
         ]);
 
         $this->command->info("Admin information :");
@@ -23,7 +23,6 @@ class UsersTableSeeder extends Seeder
             ],
         ]);
 
-        factory(\App\Models\Admin::class, 2)->create();
         factory(\App\Models\User::class, 3)->create();
     }
 }

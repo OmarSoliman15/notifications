@@ -5,17 +5,17 @@ return [
     /*
      * The logo of the dashboard.
      */
-    'logo' => '<b>Laravel</b> Quickstart',
+    'logo' => '<b>Omar</b> Notification',
 
     /*
      * The small logo of the dashboard.
      */
-    'small_logo' => '<b>L</b>Q',
+    'small_logo' => '<b>O</b>Notification',
 
     /*
      * The name of the dashboard.
      */
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Omar notifications'),
 
     'appearence' => [
 
